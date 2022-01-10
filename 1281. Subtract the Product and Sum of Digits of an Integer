@@ -1,0 +1,31 @@
+
+    class SubtracttheProductandSumofDigitsofanInteger {
+
+
+        public static void main(String[] args) {
+
+            int i = subtractProductAndSum(234);
+            System.out.println(i);
+        }
+
+        public static int subtractProductAndSum(int n) {
+
+            int sum1 = 0;
+            int mul1=1;
+            int result = 0;
+
+            while (n != 0) {
+                int rem = n % 10;
+
+                mul1*= rem;
+                sum1 = sum1 + rem;
+
+                n = n / 10;
+            }
+            result =  mul1-sum1;
+
+
+            return result;
+        }
+    }
+
